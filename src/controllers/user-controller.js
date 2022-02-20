@@ -9,7 +9,7 @@ async function getUserDetails( email, callback ) {
 		client = await db.connectingDB();
 		console.log("DB Connection Success ");
 		//throw 'working';
-		const result = await client.db("stock-db").collection("users").findOne({ email: email });
+		const result = await client.db("angular-app-db").collection("users").findOne({ email: email });
 		if (result) {
 			console.log(`Found a listing in the collection with the name ${email}`);
 			console.log(result);
