@@ -1,6 +1,6 @@
 const express = require('express');
 const userCtrl = require('./src/controllers/user-controller.js');
-const Joi = require('joi');
+//const Joi = require('joi');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -12,11 +12,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/user/:email', ( req, res ) => {
-	const schema = {
+	/*const schema = {
 		email: Joi.string().min(3).required()
 	};
 
-	/*const valid =	Joi.validate(req.body, schema);
+	const valid =	Joi.validate(req.body, schema);
 	console.log(valid);
 	if ( valid.error ) {
 
